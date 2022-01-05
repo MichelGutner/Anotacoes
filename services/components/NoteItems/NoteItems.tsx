@@ -21,8 +21,10 @@ const formatDate = (ms: string | number | Date) => {
 const NoteItems = ({ item, onPress }: any) => {
     const { title, description, time } = item;
     return (
-        <View
-            style={styles.container}>
+        <TouchableOpacity
+            style={styles.container}
+            activeOpacity={0.6}
+            onPress={onPress}>
             <View>
                 <Text style={styles.title}>{title}</Text>
                 <Text
@@ -30,18 +32,7 @@ const NoteItems = ({ item, onPress }: any) => {
                     style={styles.description}>{description}</Text>
                 <Text style={styles.time}>{formatDate(time)}</Text>
             </View>
-            <TouchableOpacity 
-                activeOpacity={0.1}
-                style={styles.config}>
-                <HeaderIcon 
-                    iconName='more-vertical'
-                    size={25}
-                    onPress={onPress}
-                    style={{}}
-                    />
-            </TouchableOpacity>
-
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -54,7 +45,7 @@ const styles = StyleSheet.create({
         width: width,
         height: 90,
         backgroundColor: colors.white,
-        marginTop: 10,
+        marginTop: 5,
         marginLeft: 7,
         marginBottom: 5,
         borderRadius: 20,
@@ -77,10 +68,6 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         fontSize: 12,
         opacity: 0.6,
-        marginTop: 4,
+        marginTop: 2,
     },
-    config: {
-        marginTop: 20,
-        marginRight: 30,
-    }
 })

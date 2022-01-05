@@ -1,7 +1,8 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import React, { useEffect, useState } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import ButtonAdd from '../../components/ButtonAdd/ButtonAdd';
+import colors from '../../components/colors/colors';
 import { useNotes } from '../../components/Contexts/NoteProvider/NoteProvider';
 import NoteItems from '../../components/NoteItems/NoteItems';
 import NoteInputModal from '../../components/NoteModal/NoteInputModal';
@@ -96,7 +97,7 @@ const NotePage = ({ user, navigation }: any) => {
                 )}
 
             </View>
-            <View>
+            <View style={[StyleSheet.absoluteFillObject, styles.buttonAdd]}>
                 <ButtonAdd
                     onPress={() => setModalVisible(true)} />
             </View>

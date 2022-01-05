@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     icon: {
         padding: 15,
         borderRadius: 4,
-        width: '30%',
+        width: '13%',
         borderWidth: 0.3
     }
 })

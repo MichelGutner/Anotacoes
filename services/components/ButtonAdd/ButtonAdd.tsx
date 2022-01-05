@@ -1,16 +1,18 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/AntDesign';
+import colors from '../colors/colors';
 
 const ButtonAdd = ({ onPress }) => {
     return (
         <TouchableOpacity
             style={styles.container}
-            activeOpacity={0.7}
+            activeOpacity={0.6}
             onPress={onPress}>
             <Icon
-                name='plus-circle'
-                size={55}
+                name='pluscircle'
+                size={50}
+                color={colors.ORANGESPLASH}
             />
         </TouchableOpacity>
     )
@@ -20,8 +22,7 @@ export default ButtonAdd
 
 const styles = StyleSheet.create({
     container: {
-        alignSelf: 'flex-end',
         marginRight: 30,
-        marginBottom: 20,
+        marginBottom: 5,
     }
 })

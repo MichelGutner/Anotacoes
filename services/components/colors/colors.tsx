@@ -5,5 +5,7 @@ export default {
     DARKGREEN: '#006400',
     DARKORANGE: '#FF8C00',
     LIGHT: '#FFFAFA',
-    BLACK: '#000000'
+    BLACK: '#000000',
+    GREY: '#BEBEBE',
+    ORANGESPLASH: '#EF8233'
 }

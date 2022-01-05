@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-community/async-storage'
 import React, { useState } from 'react'
 import { View, Text, ImageBackground, StyleSheet, TextInput, Dimensions } from 'react-native'
+import Icon from 'react-native-vector-icons/AntDesign'
 import AroundButton from '../../components/Button/AroundButton'
 import colors from '../../components/colors/colors'
 
@@ -34,13 +35,12 @@ const Intro = ({onFinish}) => {
                     placeholder='Entre com seu nome'
                     onChangeText={handleChangeText}
                 />
-                <AroundButton 
-                    iconName='arrow-right'
-                    size={18}
-                    color={colors.TRANSPARENT}
+                {name.length >= 3 ? (<Icon
                     style={styles.icon}
+                    name='arrowright'
+                    size={30}
                     onPress={handleSubmit}
-                    />
+                    />): null}
             </ImageBackground>
         </View>
 
@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     },
     icon:{
         alignSelf: 'center',
-        marginTop: 15
+        marginTop: 10
     }
 })

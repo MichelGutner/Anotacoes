@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         flex: 1,
     },
     headerText:{
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
         alignSelf: 'center',
         marginTop: 10,
@@ -16,10 +16,19 @@ export const styles = StyleSheet.create({
     },
     bodyTasks:{
         flex: 1,
-        minHeight: '77%',
-        zIndex: -1,
+        minHeight: '100%',
+        zIndex: +1
     },
     flatList:{
         marginTop: 0,
+    },
+    buttonAdd:{
+        position: 'absolute',
+        left: 290,
+        top: 670,
+        alignSelf: 'center',
+        zIndex: 1,
+        width: 80,
+        height: 60,
     }
 })
